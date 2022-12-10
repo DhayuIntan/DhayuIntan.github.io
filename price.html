@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Home Page</title>
+    <script src="jquery-3.6.1.js"></script>
+    <link rel="stylesheet" type="text/css" href="home.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+</head>
+<body>
+<header class="header">
+    <div class="container">
+        <div class="row justify-content-between align-items-center">
+            <div class="hotel">
+                <a href="home.html">d'Intan Hotel</a>
+            </div>
+            <nav class="nav">
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="price.html">Price Check</a></li>
+                    <li><a href="index.html">Logout</a></li>
+                </ul>
+            </nav>
+        </div>
+        <br>
+    <div class="contain">
+        <h1>Input to Check The Price</h1>
+        <br>
+        <div class="row">
+            <div class="col-2">Floor</div>
+            <div class="col-10"><input name="floor"></div>          
+        </div>
+        <div class="row">
+            <div class="col-2">
+                <label for="">Type</label>
+            </div>
+            <div class="col-10">
+                <select name="tipe">
+                    <option value="">--Pilih Tipe Kamar--</option>
+                    <option value="5000">Standar</option>
+                    <option value="6000">Superior</option>
+                    <option value="7000">Deluxe</option>
+                </select>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-2">Day(s)</div>
+            <div class="col-10"><input name="day"></div>           
+        </div>
+        <div class="row">
+            <div class="col-2">
+                <label for="">Discount</label>
+            </div>
+            <div class="col-10">
+                <select name="diskon">
+                    <option value="">--Pilih Diskon--</option>
+                    <option value="none">None</option>
+                    <option value="member">Member</option>
+                    <option value="bday">Birthday Promo</option>                    
+                </select>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-2"></div>
+            <div class="col-10">
+                <button id="hitung">Check</button>
+            </div>           
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <p id="tprice">Total Price is 0</p>
+                <p id="tdiskon">Total Discount is 0</p>
+                <p id="tpay" style="color: red;">Total Payment is 0</p>
+            </div>            
+        </div>
+    </div>
+    </div>
+        
+</header>
+<section class="home-section">
+</section>
+
+<script>
+    $(document).ready(function(){
+        $("#hitung").click(function(){
+            var fl = $("input[name='floor']").val();
+            var tp = $("select[name='tipe']").val();
+            var dy = $("input[name='day']").val();
+            var dc = $("select[name='diskon']").val();
+            var tambahan = 0;
+            var hsewa = 0;
+            var diskon = 0;
+
+            if(fl>5){ tambahan = 1000; }
+
+            hsewa = (tp * dy) + tambahan;
+
+            if (dc=="member") { 
+                diskon = (10/100)*hsewa;
+            } else if (dc=="bday") {
+                diskon = 500;
+            }
+            
+            var tot = hsewa - diskon;
+
+            $("#tprice").html("Total Price is "+hsewa);
+            $("#tdiskon").html("Total Discount is "+diskon);
+            $("#tpay").html("Total Payment is "+tot);
+        });
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Home Page</title>
+    <link rel="stylesheet" type="text/css" href="home.css">
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+
+    <script>
+        $(document).ready(function(){
+            console.log('Im ready');
+        });
+    </script>
+</head>
+<body>
+<header class="header">
+    <div class="container">
+        <div class="row justify-content-between align-items-center">
+            <div class="hotel">
+                <a href="home.html">d'Intan Hotel</a>
+            </div>
+            <nav class="nav">
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="price.html">Price Check</a></li>
+                    <li><a href="index.html">Logout</a></li>
+                </ul>
+            </nav>
+        </div>
+        <br>
+        <div class="slider">
+            <div>
+                <a href="#">
+                    <img src="kamar.jpg" alt="Image 1">
+                </a>            
+            </div>
+            <div>
+                <a href="#">
+                    <img src="place.jpg" alt="Image 2">
+                </a>
+            </div>
+            <div>
+                <a href="#">
+                    <img src="pool.jpg" alt="Image 3">
+                </a>            
+            </div>
+        </div>
+        <br>
+        <h1>Hotel Profile</h1>
+        <p align="justify">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores magni culpa, maxime architecto eveniet dolores non praesentium assumenda ipsum aliquam, fugiat nesciunt? Officiis voluptas totam ex libero omnis impedit fugit! Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum, veritatis quae. Magni ullam, neque, exercitationem dolore quia sit laborum quae eligendi sed reiciendis dolores. Quae illo a eum nemo perferendis.
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Labore aliquid adipisci exercitationem unde veniam, assumenda perferendis quia et maxime molestias quos incidunt, sint reiciendis a deleniti repellendus porro. Recusandae, eum.
+        </p>
+</header>
+<section class="home-section">
+</section>
+<footer>
+    <p align="center">Copyright @2022</p>
+    <p align="center">Email: intaandh@gmail.com</p>
+</footer>
+<!-- JQuery -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<!-- Slick JS -->    
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script>
+    $(document).ready(function(){
+        $('.slider').slick({
+            autoplay: true,
+            autoplaySpeed: 2500,
+            dots: true,
+            fade: true
+        });
+    });
+</script>
+</body>
+</html>

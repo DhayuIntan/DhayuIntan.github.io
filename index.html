@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login Page</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Login</h1>
+        </div>
+        <div class="main">
+            <form class="login_form" action="home.html" method="post" name="form" onsubmit="return checkform()">
+                <span>
+                    <i class="fa fa-user"></i>
+                    <input type="text" placeholder="username" name="" id="username">
+                </span><br>
+                <span>
+                    <i class="fa fa-lock"></i>
+                    <input type="password" placeholder="password" name="" id="password">
+                </span><br>
+                <button type="submit">login</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        function checkform(){
+
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+
+            if(username == "" || password == ""){
+                alert("Username dan Password Harus Diisi");
+                return false;
+            }
+            if(password.length<8){
+                alert("Password minimal terdiri dari 8 karakter");
+                return false;
+            }else{
+                return true;
+            }
+            if(password.length > 8) location.replace('home.html'); 
+
+        }
+    </script>
+
+</body>
+</html>

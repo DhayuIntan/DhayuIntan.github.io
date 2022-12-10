@@ -1,0 +1,240 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;800;900&display=swap');
+
+body{
+    margin: 0;
+    line-height: 1.5;
+}
+
+body,
+input,
+textarea,
+button{
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+
+.container{
+    max-width: 1170px;
+    margin: auto;
+}
+
+.header{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 99;
+}
+
+.header .hotel{
+    padding: 0 15px;
+}
+
+.header .hotel a{
+    text-decoration: none;
+    font-size: 30px;
+    color: #ffffff;
+    text-transform: uppercase;
+    font-weight: 900;
+    letter-spacing: 2px;
+}
+
+.header .nav{
+    padding: 0 15px;
+}
+
+.header .nav ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.header .nav ul li{
+    display: inline-block;
+    margin-left: 30px;
+}
+
+.header .nav ul li a{
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    color: #ffffff;
+    padding: 25px 0;
+    display: block;
+    transition: all 0.5s ease;
+}
+
+.header .nav ul li a:hover{
+    color: #FF9800;
+}
+
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.align-items-center{
+    align-items: center;
+}
+
+.justify-content-between{
+    justify-content: space-between;
+}
+
+.home-section{
+    min-height: 100vh;
+    background-image: url('santorini.jpg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    z-index: 1;
+}
+
+.home-section::before{
+    content: '';
+    position: absolute;
+    box-sizing: border-box;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #000000;
+    opacity: 0.7;
+    z-index: -1;
+}
+
+.home-section .row{
+    min-height: 100vh;
+}
+
+.home-section .home-content{
+    /*background-color: red;*/
+    flex: 0 0 100%;
+    max-width: 100%;
+    text-align: left;
+}
+
+h1{
+    font-size: 30px;
+    margin: 0;
+    color: #ffffff;
+    font-family: 'Raleway', sans-serif;
+}
+
+p{
+    font-size: 15px;
+    margin: 0;
+    color: #ffffff;
+    font-family: 'Raleway', sans-serif;
+}
+
+footer{
+    font-family: 'Raleway', sans-serif;
+    background-color: grey;
+    color: white;
+}
+
+.slider .slick-slide {
+    border: solid 1px #000;
+}
+
+.slider .slick-slide img {
+    width: 100%;
+    height: 400px;
+}
+
+.slick-prev, .slick-next {
+    width: 50px;
+    height: 50px;
+    z-index: 1;
+}
+
+.slick-prev {
+    left: 5px;
+}
+.slick-next {
+    right: 5px;
+}
+
+.slick-dots {
+    bottom: 15px;
+}
+
+.slick-dots li button:before {
+    font-size: 12px;
+    color: #fff;
+    text-shadow: 0 0 10px rgba(0,0,0,0.5);
+    opacity: 1;
+}
+.slick-dots li.slick-active button:before {
+    color: #dedede;
+}
+
+.slider:not(:hover) .slick-arrow,
+.slider:not(:hover) .slick-dots {
+    opacity: 0;
+}
+
+.slick-arrow,
+.slick-dots {
+    transition: opacity 0.5s ease-out;
+}
+
+#hitung{
+        background-color: #ffffff;
+        color: black;
+        font-family:'Raleway', sans-serif;
+        font-weight: bold;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        float: right;
+}
+
+.col-2{
+    color: white;
+    font-family:'Raleway', sans-serif;
+    font-weight: bold;
+}
+
+input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+}
+
+label {
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+}
+
+.col-2 {
+    float: left;
+    width: 25%;
+    margin-top: 6px;
+}
+
+.col-10 {
+    float: left;
+    width: 75%;
+    margin-top: 6px;
+}
+
+.col-12{
+    color: white;
+    font-family:'Raleway', sans-serif;
+    font-weight: bold;
+}
+
+.contain{
+    background-color: rgba(33, 34, 34, 0.7);
+    padding: 20px;
+}
